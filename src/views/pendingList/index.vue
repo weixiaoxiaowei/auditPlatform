@@ -12,7 +12,9 @@
         </el-input>
       </div>
     </div>
-    <w-table :taskList="taskList"></w-table>
+
+    <w-table :taskList="taskList" @handleLook="_handleLook" @handleRedact="_handleRedact"></w-table>
+
     <div class="paginationBox">
       <el-pagination
         background
@@ -25,23 +27,37 @@
         @next-click="handleCurrentpage"
       ></el-pagination>
     </div>
+
+    <div class="dialogBox">
+      <el-dialog :visible.sync="dialogVisible">
+        <div slot="title" class="title">审批详情</div>
+        <pending-progress :pendingList="pengdingList"></pending-progress>
+        <div slot="footer" class="footer">
+          <el-button type="primary" @click="dialogVisible = false">返回</el-button>
+        </div>
+      </el-dialog>
+    </div>
   </div>
 </template>
 
 <script>
 import wTable from "../../components/table.vue";
+import pendingProgress from "../../components/pendingProgress.vue";
 export default {
   components: {
-    wTable
+    wTable,
+    pendingProgress
   },
 
   data() {
     return {
+      dialogVisible: false,
       selectState: 0,
       options: ["所有状态", "完成", "审批中", "退回"],
       searchContent: "",
       taskList: [],
-      currentPage: 1
+      currentPage: 1,
+      pengdingList: {}
     };
   },
   created() {
@@ -94,6 +110,14 @@ export default {
     handleSearch() {
       this.currentPage = 1;
       this.getTaskList();
+    },
+    _handleLook(data) {
+      console.log(data);
+      this.dialogVisible = !this.dialogVisible;
+      this.pengdingList = data;
+    },
+    _handleRedact(data) {
+      console.log(data);
     }
   }
 };
@@ -119,6 +143,15 @@ export default {
       &.active {
         background: $base-color !important;
       }
+    }
+  }
+  .dialogBox {
+    line-height: normal;
+    .title {
+      text-align: left;
+    }
+    .footer {
+      text-align: center;
     }
   }
 }

@@ -12,7 +12,7 @@
             "flowUser": "卫肖",
             "flowTime": "20191115",
             "currentProgress": "审批完成",
-            "flowState": "0",
+            "flowState": "4",
             "remarks": "申报材料已提交"
         },
         {
@@ -20,14 +20,6 @@
             "flowUser": "卫肖",
             "flowTime": "20191115",
             "currentProgress": "经理审批中",
-            "flowState": "1",
-            "remarks": "申报材料已提交"
-        },
-        {
-            "flowName": "采购申请",
-            "flowUser": "卫肖",
-            "flowTime": "20191115",
-            "currentProgress": "审批完成",
             "flowState": "2",
             "remarks": "申报材料已提交"
         },
@@ -36,15 +28,7 @@
             "flowUser": "卫肖",
             "flowTime": "20191115",
             "currentProgress": "审批完成",
-            "flowState": "0",
-            "remarks": "申报材料已提交"
-        },
-        {
-            "flowName": "采购申请",
-            "flowUser": "卫肖",
-            "flowTime": "20191115",
-            "currentProgress": "经理审批中",
-            "flowState": "1",
+            "flowState": "4",
             "remarks": "申报材料已提交"
         },
         {
@@ -52,6 +36,14 @@
             "flowUser": "卫肖",
             "flowTime": "20191115",
             "currentProgress": "审批完成",
+            "flowState": "4",
+            "remarks": "申报材料已提交"
+        },
+        {
+            "flowName": "采购申请",
+            "flowUser": "卫肖",
+            "flowTime": "20191115",
+            "currentProgress": "经理审批中",
             "flowState": "2",
             "remarks": "申报材料已提交"
         },
@@ -60,14 +52,22 @@
             "flowUser": "卫肖",
             "flowTime": "20191115",
             "currentProgress": "审批完成",
-            "flowState": "0",
+            "flowState": "4",
             "remarks": "申报材料已提交"
         },
         {
             "flowName": "采购申请",
             "flowUser": "卫肖",
             "flowTime": "20191115",
-            "currentProgress": "经理审批中",
+            "currentProgress": "审批完成",
+            "flowState": "4",
+            "remarks": "申报材料已提交"
+        },
+        {
+            "flowName": "采购申请",
+            "flowUser": "卫肖",
+            "flowTime": "20191115",
+            "currentProgress": "组长审批中",
             "flowState": "1",
             "remarks": "申报材料已提交"
         },
@@ -76,15 +76,15 @@
             "flowUser": "卫肖",
             "flowTime": "20191115",
             "currentProgress": "审批完成",
-            "flowState": "2",
+            "flowState": "4",
             "remarks": "申报材料已提交"
         },
         {
             "flowName": "采购申请",
             "flowUser": "卫肖",
             "flowTime": "20191115",
-            "currentProgress": "审批完成",
-            "flowState": "0",
+            "currentProgress": "退回",
+            "flowState": "3",
             "remarks": "申报材料已提交"
         }
     ]

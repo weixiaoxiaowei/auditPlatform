@@ -33,6 +33,11 @@ const routes = [
         name: 'pendingList',
         component: () => import(/* webpackChunkName: "about" */ '../views/pendingList/index.vue'),
       },
+      {
+        path: 'application',
+        name: 'application',
+        component: () => import(/* webpackChunkName: "about" */ '../views/application/index.vue'),
+      },
     ]
   },
 

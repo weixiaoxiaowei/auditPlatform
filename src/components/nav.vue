@@ -42,7 +42,7 @@
             <span>申请</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="3-1">发起审批</el-menu-item>
+            <el-menu-item index="/index/application">发起审批</el-menu-item>
             <el-menu-item index="3-2">提升权限</el-menu-item>
           </el-menu-item-group>
         </el-submenu>

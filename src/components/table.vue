@@ -16,8 +16,8 @@
       <el-table-column prop="remarks" label="备注" width="280"></el-table-column>
       <el-table-column fixed="right" label="操作" width="120">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button>
-          <el-button type="text" size="small">操作</el-button>
+          <el-button @click="handleLook(scope.row)" type="text" size="small">查看</el-button>
+          <el-button type="text" size="small" @click="handleRedact(scope.row)">操作</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -30,14 +30,18 @@ export default {
   data() {
     return {
       flowStateColor: {
-        "0": "#67c23a",
-        "1": "#f56c6c",
-        "2": "#e6a23c"
+        "0": "#e6a23c",
+        "1": "#e6a23c",
+        "2": "#e6a23c",
+        "3": "#f56c6c",
+        "4": "#67c23a"
       },
       flowState: {
-        "0": "完成",
+        "0": "发起",
         "1": "审批中",
-        "2": "退回"
+        "2": "审批中",
+        "3": "退回",
+        "4": "完成"
       }
     };
   },
@@ -46,8 +50,11 @@ export default {
     // console.log(formatTime(new Date(), "yyyy-mm-ss"));
   },
   methods: {
-    handleClick(row) {
-      console.log(row);
+    handleLook(row) {
+      this.$emit("handleLook", row);
+    },
+    handleRedact(row) {
+      this.$emit("handleRedact", row);
     }
   }
 };
